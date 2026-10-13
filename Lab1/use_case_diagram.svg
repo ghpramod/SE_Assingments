@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 820" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Shadow Filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+    
+    <!-- Markers for arrows -->
+    <marker id="arrow-include" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-extend" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+  </defs>
+
+  <!-- Title Header -->
+  <rect x="20" y="15" width="1140" height="55" rx="8" fill="#1e293b" />
+  <text x="40" y="42" fill="#f8fafc" font-size="18" font-weight="700">PES University | Department of CSE — Lab 1: Requirements Engineering &amp; UML Use-Case Modelling</text>
+  <text x="40" y="60" fill="#94a3b8" font-size="12">Problem Statement #34: Digital Gift Card &amp; Loyalty Point Exchange Platform</text>
+
+  <!-- System Boundary Box -->
+  <rect x="230" y="90" width="670" height="700" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="2" />
+  <rect x="230" y="90" width="670" height="38" rx="14" fill="#e2e8f0" />
+  <rect x="230" y="115" width="670" height="13" fill="#e2e8f0" />
+  <text x="565" y="115" fill="#0f172a" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0.5">System Boundary: Digital Gift Card &amp; Loyalty Point Exchange</text>
+
+  <!-- ================= ACTOR 1: Account Holder (Left) ================= -->
+  <g transform="translate(100, 310)">
+    <!-- Stick figure -->
+    <circle cx="30" cy="20" r="14" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.5" />
+    <line x1="30" y1="34" x2="30" y2="75" stroke="#0284c7" stroke-width="2.5" />
+    <line x1="10" y1="50" x2="50" y2="50" stroke="#0284c7" stroke-width="2.5" />
+    <line x1="30" y1="75" x2="12" y2="110" stroke="#0284c7" stroke-width="2.5" />
+    <line x1="30" y1="75" x2="48" y2="110" stroke="#0284c7" stroke-width="2.5" />
+    <!-- Actor Label -->
+    <text x="30" y="132" fill="#0f172a" font-size="14" font-weight="700" text-anchor="middle">Account Holder</text>
+    <text x="30" y="148" fill="#64748b" font-size="11" font-style="italic" text-anchor="middle">(Primary Human Actor)</text>
+  </g>
+
+  <!-- ================= ACTOR 2: Merchant Partner (Right Top) ================= -->
+  <g transform="translate(1010, 210)">
+    <circle cx="30" cy="20" r="14" fill="#fef3c7" stroke="#d97706" stroke-width="2.5" />
+    <line x1="30" y1="34" x2="30" y2="75" stroke="#d97706" stroke-width="2.5" />
+    <line x1="10" y1="50" x2="50" y2="50" stroke="#d97706" stroke-width="2.5" />
+    <line x1="30" y1="75" x2="12" y2="110" stroke="#d97706" stroke-width="2.5" />
+    <line x1="30" y1="75" x2="48" y2="110" stroke="#d97706" stroke-width="2.5" />
+    <text x="30" y="132" fill="#0f172a" font-size="14" font-weight="700" text-anchor="middle">Merchant Partner</text>
+    <text x="30" y="148" fill="#64748b" font-size="11" font-style="italic" text-anchor="middle">(External System Actor)</text>
+  </g>
+
+  <!-- ================= ACTOR 3: Anti-Fraud Engine (Right Bottom) ================= -->
+  <g transform="translate(1010, 520)">
+    <circle cx="30" cy="20" r="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5" />
+    <line x1="30" y1="34" x2="30" y2="75" stroke="#dc2626" stroke-width="2.5" />
+    <line x1="10" y1="50" x2="50" y2="50" stroke="#dc2626" stroke-width="2.5" />
+    <line x1="30" y1="75" x2="12" y2="110" stroke="#dc2626" stroke-width="2.5" />
+    <line x1="30" y1="75" x2="48" y2="110" stroke="#dc2626" stroke-width="2.5" />
+    <text x="30" y="132" fill="#0f172a" font-size="13" font-weight="700" text-anchor="middle">Anti-Fraud &amp; Risk</text>
+    <text x="30" y="148" fill="#dc2626" font-size="11" font-weight="600" text-anchor="middle">Security Engine</text>
+    <text x="30" y="162" fill="#64748b" font-size="10" font-style="italic" text-anchor="middle">(Automated Daemon)</text>
+  </g>
+
+  <!-- ================= USE CASES (OVALS) ================= -->
+  
+  <!-- UC-01 -->
+  <g transform="translate(270, 150)" filter="url(#shadow)">
+    <ellipse cx="115" cy="30" rx="115" ry="30" fill="#eff6ff" stroke="#2563eb" stroke-width="2" />
+    <text x="115" y="27" fill="#1e293b" font-size="12" font-weight="700" text-anchor="middle">UC-01: Aggregate Brand</text>
+    <text x="115" y="42" fill="#1e293b" font-size="12" font-weight="700" text-anchor="middle">Loyalty Points</text>
+  </g>
+
+  <!-- UC-02 -->
+  <g transform="translate(265, 255)" filter="url(#shadow)">
+    <ellipse cx="120" cy="35" rx="120" ry="35" fill="#eff6ff" stroke="#2563eb" stroke-width="2" />
+    <text x="120" y="28" fill="#1e293b" font-size="12" font-weight="700" text-anchor="middle">UC-02: Convert Points to</text>
+    <text x="120" y="44" fill="#1e293b" font-size="12" font-weight="700" text-anchor="middle">Universal Credits</text>
+    <text x="120" y="58" fill="#64748b" font-size="10" text-anchor="middle">(Dynamic Rate Quotation)</text>
+  </g>
+
+  <!-- UC-03: Core Use Case with Extension Point -->
+  <g transform="translate(255, 375)" filter="url(#shadow)">
+    <ellipse cx="130" cy="46" rx="130" ry="46" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" />
+    <text x="130" y="32" fill="#1e293b" font-size="13" font-weight="700" text-anchor="middle">UC-03: Redeem Digital Gift Card</text>
+    <line x1="40" y1="44" x2="220" y2="44" stroke="#cbd5e1" stroke-width="1" />
+    <text x="130" y="58" fill="#334155" font-size="10" font-weight="600" text-anchor="middle">Extension Point: Fraud Check</text>
+    <text x="130" y="70" fill="#64748b" font-size="9" text-anchor="middle">[Risk score &gt; threshold / high-value]</text>
+  </g>
+
+  <!-- UC-04 (Included) -->
+  <g transform="translate(630, 185)" filter="url(#shadow)">
+    <ellipse cx="115" cy="32" rx="115" ry="32" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+    <text x="115" y="28" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">UC-04: Validate Merchant</text>
+    <text x="115" y="44" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Loyalty Points</text>
+  </g>
+
+  <!-- UC-05 (Included) -->
+  <g transform="translate(630, 315)" filter="url(#shadow)">
+    <ellipse cx="115" cy="32" rx="115" ry="32" fill="#f1f5f9" stroke="#475569" stroke-width="2" />
+    <text x="115" y="28" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">UC-05: Authenticate &amp;</text>
+    <text x="115" y="44" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle">Authorize Account</text>
+  </g>
+
+  <!-- UC-06 (Extended) -->
+  <g transform="translate(260, 530)" filter="url(#shadow)">
+    <ellipse cx="125" cy="38" rx="125" ry="38" fill="#fef2f2" stroke="#dc2626" stroke-width="2" />
+    <text x="125" y="30" fill="#991b1b" font-size="12" font-weight="700" text-anchor="middle">UC-06: Apply Anti-Fraud</text>
+    <text x="125" y="46" fill="#991b1b" font-size="12" font-weight="700" text-anchor="middle">Voucher Lock</text>
+    <text x="125" y="60" fill="#dc2626" font-size="10" text-anchor="middle">(Checksum &amp; Hold)</text>
+  </g>
+
+  <!-- UC-07 -->
+  <g transform="translate(630, 640)" filter="url(#shadow)">
+    <ellipse cx="120" cy="34" rx="120" ry="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2" />
+    <text x="120" y="30" fill="#1e293b" font-size="12" font-weight="700" text-anchor="middle">UC-07: Settle Merchant</text>
+    <text x="120" y="46" fill="#1e293b" font-size="12" font-weight="700" text-anchor="middle">Ledger Balance</text>
+  </g>
+
+  <!-- ================= ASSOCIATIONS (SOLID LINES) ================= -->
+  <!-- User to UC-01 -->
+  <line x1="160" y1="350" x2="270" y2="180" stroke="#334155" stroke-width="2" />
+  <!-- User to UC-02 -->
+  <line x1="160" y1="360" x2="265" y2="290" stroke="#334155" stroke-width="2" />
+  <!-- User to UC-03 -->
+  <line x1="160" y1="375" x2="255" y2="415" stroke="#334155" stroke-width="2" />
+
+  <!-- Merchant Partner to UC-04 -->
+  <line x1="1010" y1="260" x2="860" y2="220" stroke="#d97706" stroke-width="2" />
+  <!-- Merchant Partner to UC-03 -->
+  <line x1="1010" y1="270" x2="515" y2="405" stroke="#d97706" stroke-width="1.8" />
+  <!-- Merchant Partner to UC-07 -->
+  <line x1="1010" y1="300" x2="870" y2="650" stroke="#d97706" stroke-width="2" />
+
+  <!-- Anti-Fraud Engine to UC-06 -->
+  <line x1="1010" y1="575" x2="510" y2="568" stroke="#dc2626" stroke-width="2" />
+
+  <!-- ================= STEREOTYPES (DASHED ARROWS) ================= -->
+
+  <!-- UC-02 <<include>> UC-04 -->
+  <g>
+    <path d="M 505 285 L 630 225" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-include)" />
+    <rect x="532" y="235" width="70" height="20" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1" />
+    <text x="567" y="249" fill="#1d4ed8" font-size="11" font-weight="700" text-anchor="middle">«include»</text>
+  </g>
+
+  <!-- UC-03 <<include>> UC-05 -->
+  <g>
+    <path d="M 515 410 L 630 355" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-include)" />
+    <rect x="535" y="367" width="70" height="20" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1" />
+    <text x="570" y="381" fill="#1d4ed8" font-size="11" font-weight="700" text-anchor="middle">«include»</text>
+  </g>
+
+  <!-- UC-06 <<extend>> UC-03 -->
+  <g>
+    <path d="M 385 530 L 385 470" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-extend)" />
+    <rect x="350" y="488" width="70" height="20" rx="4" fill="#ffffff" stroke="#fca5a5" stroke-width="1" />
+    <text x="385" y="502" fill="#b91c1c" font-size="11" font-weight="700" text-anchor="middle">«extend»</text>
+  </g>
+
+  <!-- UC-03 <<include>> UC-07 -->
+  <g>
+    <path d="M 470 460 L 650 645" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-include)" />
+    <rect x="525" y="535" width="70" height="20" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1" />
+    <text x="560" y="549" fill="#1d4ed8" font-size="11" font-weight="700" text-anchor="middle">«include»</text>
+  </g>
+
+  <!-- Legend Box -->
+  <g transform="translate(250, 715)">
+    <rect x="0" y="0" width="630" height="55" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+    <text x="15" y="20" fill="#0f172a" font-size="11" font-weight="700">UML Notation Legend:</text>
+    
+    <line x1="15" y1="38" x2="60" y2="38" stroke="#334155" stroke-width="2" />
+    <text x="68" y="42" fill="#475569" font-size="11">Association</text>
+
+    <line x1="160" y1="38" x2="205" y2="38" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-include)" />
+    <text x="215" y="42" fill="#1d4ed8" font-size="11" font-weight="600">«include» (Always triggered)</text>
+
+    <line x1="390" y1="38" x2="435" y2="38" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-extend)" />
+    <text x="445" y="42" fill="#b91c1c" font-size="11" font-weight="600">«extend» (Conditional trigger)</text>
+  </g>
+
+</svg>
